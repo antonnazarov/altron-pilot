@@ -1,0 +1,16 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://localhost/ci/interface">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:addCIMInteractionRequest>
+         <int:InteractionRequest>
+            <int:msisdn>12441</int:msisdn>
+            <int:callId>252</int:callId>
+            <int:accountId>1425</int:accountId>
+            <int:source>234</int:source>
+            <int:topicCode>2355</int:topicCode>
+            <int:comment>422</int:comment>
+            <int:interactionDate>5555</int:interactionDate>
+         </int:InteractionRequest>
+      </int:addCIMInteractionRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

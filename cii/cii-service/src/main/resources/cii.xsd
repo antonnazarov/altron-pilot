@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost/ci/interface"
+           targetNamespace="http://localhost/ci/interface" elementFormDefault="qualified">
+
+    <xs:element name="addCIMInteractionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="InteractionRequest" type="tns:InteractionRequest"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addCIMInteractionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="InteractionResponse" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="InteractionRequest">
+        <xs:sequence>
+            <xs:element name="msisdn" type="xs:string"/>
+            <xs:element name="callId" type="xs:int"/>
+            <xs:element name="accountId" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+            <xs:element name="topicCode" type="xs:string"/>
+            <xs:element name="comment" type="xs:string"/>
+            <xs:element name="interactionDate" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
