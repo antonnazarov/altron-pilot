@@ -1,3 +1,5 @@
+-- login as imadmin
+
 -- ****************************************************
 -- *             IM_TRANSACTION_SUMMARIES             *
 -- ****************************************************
@@ -71,3 +73,12 @@ create table IM_SERVICE_REQUEST_SUMMARIES (
 );
 
 
+
+
+--------------------------------------------------------
+--  DDL for Sequence IM_SEQ
+--------------------------------------------------------
+CREATE SEQUENCE  IM_SEQ  
+   MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+   INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER
+   NOCYCLE NOKEEP NOSCALE GLOBAL;
