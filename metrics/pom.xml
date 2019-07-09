@@ -5,12 +5,12 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>bs2.cii</groupId>
-    <artifactId>cii</artifactId>
+    <groupId>bs2.metrics</groupId>
+    <artifactId>metrics</artifactId>
     <version>0.1-pilot</version>
     <packaging>pom</packaging>
 
-    <name>The CII- service</name>
+    <name>Metrics</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,7 +20,8 @@
     </parent>
 
     <modules>
-        <module>cii-service</module>
+        <module>metrics-service</module>
+        <module>metrics-persistence</module>
     </modules>
 
     <dependencies>

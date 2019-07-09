@@ -11,7 +11,7 @@
     <description>The implementation of CII- microservice</description>
 
     <parent>
-        <groupId>bs2.cim</groupId>
+        <groupId>bs2.cii</groupId>
         <artifactId>cii</artifactId>
         <version>0.1-pilot</version>
     </parent>

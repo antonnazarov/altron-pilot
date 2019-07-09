@@ -5,7 +5,7 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>bs2.cii</groupId>
+    <groupId>bs2.cim</groupId>
     <artifactId>cii</artifactId>
     <version>0.1-pilot</version>
     <packaging>pom</packaging>
@@ -33,5 +33,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>

@@ -24,11 +24,18 @@ GRANT create synonym TO imwriter;
 GRANT SELECT, INSERT, UPDATE, DELETE ON imadmin.IM_TRANSACTION_SUMMARIES TO imwriter;
 GRANT SELECT, INSERT, UPDATE, DELETE ON imadmin.IM_COMMAND_SUMMARIES TO imwriter;
 GRANT SELECT, INSERT, UPDATE, DELETE ON imadmin.IM_SERVICE_REQUEST_SUMMARIES TO imwriter;
+GRANT SELECT, INSERT, UPDATE, DELETE ON imadmin.IM_TRANSACTION TO imwriter;
+GRANT SELECT ON imadmin.IM_SEQ TO imwriter;
 
 -- login as imwriter
 CREATE SYNONYM im_transaction_summaries FOR imadmin.IM_TRANSACTION_SUMMARIES;
 CREATE SYNONYM im_command_summaries FOR imadmin.IM_COMMAND_SUMMARIES;
 CREATE SYNONYM im_service_request_summaries FOR imadmin.IM_SERVICE_REQUEST_SUMMARIES;
+CREATE SYNONYM im_transaction FOR imadmin.IM_TRANSACTION;
+CREATE SYNONYM im_seq FOR imadmin.IM_SEQ;
+
+-- test srquence as a imwriter
+select im_seq.nextval from dual;
 
 -- login as system
 CREATE USER objtransfer IDENTIFIED BY giantant100;
@@ -42,5 +49,3 @@ GRANT create synonym TO objtransfer;
 GRANT execute any procedure TO objtransfer;
 alter user objtransfer quota 128M on users;
 
--- {call MS_SMS_TRANSFER.P_Insert_SMS(?,?,?,?,?,?,?,?,?,?,?,? ) }
--- {call SP_Scratchpad_Transfer.P_Insert_Scratchpad(?,?,?,?,?,?,?,?,?,?,?,? ) }
