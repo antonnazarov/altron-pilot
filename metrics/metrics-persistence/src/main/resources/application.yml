@@ -1,0 +1,6 @@
+spring.datasource.url: "jdbc:oracle:thin:@localhost:1521:TESTDB"
+spring.datasource.driver.class: "oracle.jdbc.driver.OracleDriver"
+spring.datasource.username: "imwriter"
+spring.datasource.password: "giantant100"
+
+spring.jpa.show-sql: "true"

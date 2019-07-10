@@ -10,6 +10,7 @@ GRANT create any trigger TO imadmin;
 GRANT create any procedure TO imadmin;
 GRANT create sequence TO imadmin;
 GRANT create synonym TO imadmin;  
+alter user imadmin quota 128M on users;
 
 CREATE USER imwriter IDENTIFIED BY giantant100;
 GRANT create session TO imwriter;
@@ -19,6 +20,7 @@ GRANT create any trigger TO imwriter;
 GRANT create any procedure TO imwriter;
 GRANT create sequence TO imwriter;
 GRANT create synonym TO imwriter;
+ALTER USER imwriter QUOTA 100M ON USERS;
 
 -- login as imadmin
 GRANT SELECT, INSERT, UPDATE, DELETE ON imadmin.IM_TRANSACTION_SUMMARIES TO imwriter;

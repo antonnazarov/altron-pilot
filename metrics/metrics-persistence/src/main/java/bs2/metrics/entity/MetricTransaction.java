@@ -20,6 +20,25 @@ public class MetricTransaction implements Serializable {
 
     private static final long serialVersionUID = -8462414536706514774L;
 
+    public MetricTransaction(java.util.Date createdTime, int periodInterval, java.util.Date periodDate,
+            String serverName, String originId, TransactionClass transactionClass, String transactionType,
+            PeriodType periodType, TransactionResult result, long duration, RecordStatus status) {
+        this.createdTime = createdTime;
+        this.periodInterval = periodInterval;
+        this.periodDate = periodDate;
+        this.serverName = serverName;
+        this.originId = originId;
+        this.transactionClass = transactionClass;
+        this.transactionType = transactionType;
+        this.periodType = periodType;
+        this.result = result;
+        this.duration = duration;
+        this.status = status;
+    }
+
+    public MetricTransaction() {
+    }
+
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "im_seq_generator")
