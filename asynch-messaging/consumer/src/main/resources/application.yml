@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: consumerservice
+          
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination:  simpleStreamQueue
+          content-type: application/json
+          group: myTestGroup
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost

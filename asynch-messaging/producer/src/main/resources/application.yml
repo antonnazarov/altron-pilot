@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: producerservice
+      
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination:  simpleStreamQueue
+          content-type: application/json
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+            
