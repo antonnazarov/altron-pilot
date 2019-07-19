@@ -5,3 +5,6 @@
     <artifactId>ojdbc7</artifactId>
     <version>12.1.0.2</version>
 </dependency>
+
+
+https://www.baeldung.com/spring-cloud-netflix-eureka

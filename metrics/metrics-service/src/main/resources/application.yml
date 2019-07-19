@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: metric
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:TESTDB
+    driver:
+      class: oracle.jdbc.driver.OracleDriver
+    username: imwriter
+    password: giantant100
+  jpa:
+    show-sql: true
+          
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination:  metricQueue
+          content-type: application/json
+          group: metricGroup
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+

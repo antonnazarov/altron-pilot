@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>bs2.cim</groupId>
-    <artifactId>cim-service</artifactId>
-    <version>0.1-pilot</version>
+
+    <groupId>altron.bs2</groupId>
+    <artifactId>eurekasvr</artifactId>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>CIM microservice</name>
-    <description>The implementation of CIM- microservice</description>
+    <name>Eureka Server</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -17,7 +17,7 @@
         <version>2.1.5.RELEASE</version>
         <relativePath />
     </parent>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -32,31 +32,15 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!--  dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-starter</artifactId>
-        </dependency -->        
-        <dependency>
-            <groupId>bs2.cim</groupId>
-            <artifactId>cim-persistence</artifactId>
-            <version>0.1-pilot</version>
-        </dependency>
-        <dependency>
-            <groupId>bs2.commons</groupId>
-            <artifactId>commons</artifactId>
-            <version>0.1-pilot</version>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 
     <properties>
-        <start-class>bs2.cim.Application</start-class>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>bs2.eurekasvr.EurekaServerApplication</start-class>
+        <java.version>1.8</java.version>
     </properties>
 
     <build>
@@ -67,4 +51,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
