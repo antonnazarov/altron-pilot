@@ -29,6 +29,11 @@
             <artifactId>metrics-persistence</artifactId>
             <version>0.1-pilot</version>
         </dependency>
+        <dependency>
+            <groupId>bs2.commons</groupId>
+            <artifactId>commons</artifactId>
+            <version>0.1-pilot</version>
+        </dependency>
     </dependencies>
 
     <properties>

@@ -26,7 +26,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "cii")    
+    @Bean(name = "cii")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema ciiSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("CiiPort");

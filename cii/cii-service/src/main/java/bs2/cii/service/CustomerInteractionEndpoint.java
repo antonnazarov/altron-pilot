@@ -7,20 +7,22 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import bs2.cii.service.gen.AddCIMInteractionRequest;
 import bs2.cii.service.gen.AddCIMInteractionResponse;
+import bs2.commons.metrics.Metricable;
 
 @Endpoint
 public class CustomerInteractionEndpoint {
 
-	private static final String NAMESPACE_URI = "http://localhost/ci/interface";
+    private static final String NAMESPACE_URI = "http://localhost/ci/interface";
 
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "addCIMInteractionRequest")
-	@ResponsePayload
-	public AddCIMInteractionResponse addCIMInteractionRequest(@RequestPayload AddCIMInteractionRequest request) {
-		AddCIMInteractionResponse response = new AddCIMInteractionResponse();
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addCIMInteractionRequest")
+    @ResponsePayload
+    @Metricable(serverName = "CustomerInteractionEndpoint::addCIMInteractionRequest", transactionType = "ADCMDN")
+    public AddCIMInteractionResponse addCIMInteractionRequest(@RequestPayload AddCIMInteractionRequest request) {
+        AddCIMInteractionResponse response = new AddCIMInteractionResponse();
 
-		System.out.println("addCIMInteractionRequest...");
-		response.setInteractionResponse("OK");
+        System.out.println("addCIMInteractionRequest...");
+        response.setInteractionResponse("OK");
 
-		return response;
-	}
+        return response;
+    }
 }
