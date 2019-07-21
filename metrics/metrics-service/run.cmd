@@ -1,1 +1,1 @@
-start mvn spring-boot:run
+start mvn -Dserver.port=8090 spring-boot:run

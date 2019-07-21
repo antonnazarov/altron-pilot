@@ -69,7 +69,7 @@ create table IM_SERVICE_REQUEST_SUMMARIES (
    ASYNCH_DURATION_MAX   NUMBER(9) not null,
    ASYNCH_DURATION_MIN   NUMBER(9) not null,
    EXCEPTIONS_COUNT      NUMBER(9) not null,
-   constraint PK_IM_SERVICE_REQUEST_SUMMARIES primary key (ID)
+   constraint PK_IMSRVRQ primary key (ID)
 );
 
 

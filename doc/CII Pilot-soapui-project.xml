@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2ffcb4e8-efcf-4ad7-a208-47aea072c087" activeEnvironment="Default" name="CII Pilot" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="acda1e3f-785c-4753-a4a8-90c6ec10023b" wsaVersion="NONE" name="CiiPortSoap11" type="wsdl" bindingName="{http://localhost/ci/interface}CiiPortSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/ws/cii.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/ws/cii.wsdl"><con:part><con:url>http://localhost:8080/ws/cii.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://localhost/ci/interface" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://localhost/ci/interface" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://localhost/ci/interface">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://localhost/ci/interface" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="addCIMInteractionRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InteractionRequest" type="tns:InteractionRequest"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addCIMInteractionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InteractionResponse" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="InteractionRequest">
+        <xs:sequence>
+          <xs:element name="msisdn" type="xs:string"/>
+          <xs:element name="callId" type="xs:int"/>
+          <xs:element name="accountId" type="xs:string"/>
+          <xs:element name="source" type="xs:string"/>
+          <xs:element name="topicCode" type="xs:string"/>
+          <xs:element name="comment" type="xs:string"/>
+          <xs:element name="interactionDate" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addCIMInteractionResponse">
+    <wsdl:part element="tns:addCIMInteractionResponse" name="addCIMInteractionResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addCIMInteractionRequest">
+    <wsdl:part element="tns:addCIMInteractionRequest" name="addCIMInteractionRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CiiPort">
+    <wsdl:operation name="addCIMInteraction">
+      <wsdl:input message="tns:addCIMInteractionRequest" name="addCIMInteractionRequest"></wsdl:input>
+      <wsdl:output message="tns:addCIMInteractionResponse" name="addCIMInteractionResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CiiPortSoap11" type="tns:CiiPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addCIMInteraction">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="addCIMInteractionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addCIMInteractionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CiiPortService">
+    <wsdl:port binding="tns:CiiPortSoap11" name="CiiPortSoap11">
+      <soap:address location="http://localhost:8080/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/ws</con:endpoint></con:endpoints><con:operation id="00ef9c2c-e7b7-4cd8-b42a-964bc77133f9" isOneWay="false" action="" name="addCIMInteraction" bindingOperationName="addCIMInteraction" type="Request-Response" outputName="addCIMInteractionResponse" inputName="addCIMInteractionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="07c3c431-35a8-4645-9465-9c7874a30d92" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://localhost/ci/interface">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <int:addCIMInteractionRequest>\r
+         <int:InteractionRequest>\r
+            <int:msisdn>12441</int:msisdn>\r
+            <int:callId>252</int:callId>\r
+            <int:accountId>1425</int:accountId>\r
+            <int:source>234</int:source>\r
+            <int:topicCode>2355</int:topicCode>\r
+            <int:comment>422</int:comment>\r
+            <int:interactionDate>5555</int:interactionDate>\r
+         </int:InteractionRequest>\r
+      </int:addCIMInteractionRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/ci/interface/CiiPort/addCIMInteractionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

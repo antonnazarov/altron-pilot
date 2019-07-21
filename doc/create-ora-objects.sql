@@ -11,6 +11,7 @@ GRANT create any procedure TO imadmin;
 GRANT create sequence TO imadmin;
 GRANT create synonym TO imadmin;  
 alter user imadmin quota 128M on users;
+alter user imadmin quota 128M on system;
 
 CREATE USER imwriter IDENTIFIED BY giantant100;
 GRANT create session TO imwriter;
@@ -21,6 +22,7 @@ GRANT create any procedure TO imwriter;
 GRANT create sequence TO imwriter;
 GRANT create synonym TO imwriter;
 ALTER USER imwriter QUOTA 100M ON USERS;
+alter user imwriter quota 128M on system;
 
 -- login as imadmin
 GRANT SELECT, INSERT, UPDATE, DELETE ON imadmin.IM_TRANSACTION_SUMMARIES TO imwriter;
@@ -50,4 +52,5 @@ GRANT create sequence TO objtransfer;
 GRANT create synonym TO objtransfer;
 GRANT execute any procedure TO objtransfer;
 alter user objtransfer quota 128M on users;
+alter user objtransfer quota 128M on system;
 
