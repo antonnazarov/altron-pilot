@@ -26,9 +26,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>bs2.commons</groupId>
+            <artifactId>commons</artifactId>
+            <version>0.1-pilot</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>        
     </dependencies>
 
     <properties>

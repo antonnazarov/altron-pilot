@@ -17,21 +17,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
             <groupId>bs2.metrics</groupId>
             <artifactId>metrics-persistence</artifactId>
-            <version>0.1-pilot</version>
-        </dependency>
-        <dependency>
-            <groupId>bs2.commons</groupId>
-            <artifactId>commons</artifactId>
             <version>0.1-pilot</version>
         </dependency>
     </dependencies>

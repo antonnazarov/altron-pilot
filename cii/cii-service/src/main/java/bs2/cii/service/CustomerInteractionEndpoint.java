@@ -16,7 +16,7 @@ public class CustomerInteractionEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addCIMInteractionRequest")
     @ResponsePayload
-    @Metricable(serverName = "CustomerInteractionEndpoint::addCIMInteractionRequest", transactionType = "ADCMDN")
+    @Metricable(serverName = "CII::addRequest", transactionType = "ADCMDN")
     public AddCIMInteractionResponse addCIMInteractionRequest(@RequestPayload AddCIMInteractionRequest request) {
         AddCIMInteractionResponse response = new AddCIMInteractionResponse();
 
