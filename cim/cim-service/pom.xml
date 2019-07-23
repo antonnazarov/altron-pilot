@@ -39,10 +39,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--  dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-starter</artifactId>
-        </dependency -->        
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>        
         <dependency>
             <groupId>bs2.cim</groupId>
             <artifactId>cim-persistence</artifactId>
@@ -56,7 +56,7 @@
     </dependencies>
 
     <properties>
-        <start-class>bs2.cim.Application</start-class>
+        <start-class>bs2.cim.service.Application</start-class>
     </properties>
 
     <build>

@@ -3,7 +3,7 @@ spring:
     name: cim
 
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:TESTDB
+    url: jdbc:oracle:thin:@localhost:1521:XE
     driver:
       class: oracle.jdbc.driver.OracleDriver
     username: objtransfer
