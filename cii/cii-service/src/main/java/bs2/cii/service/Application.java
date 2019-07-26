@@ -16,7 +16,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @SpringBootApplication
 @EnableBinding(Source.class)
-@EnableFeignClients(basePackages = "bs2.commons.cim")
+@EnableFeignClients
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages = { "bs2.cii.service", "bs2.commons.metrics", "bs2.commons.cim" })
 public class Application {
