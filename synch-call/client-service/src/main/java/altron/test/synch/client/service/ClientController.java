@@ -16,6 +16,9 @@ public class ClientController {
     @Autowired
     ServiceProvider serviceProvider;
 
+    @Autowired
+    CustomerInteractionService cim;
+
     @RequestMapping(value = "altron/client", params = { "clientId" }, method = RequestMethod.GET)
     public String callClientSide(@RequestParam("clientId") String clientId) {
         logger.info("The Client Service was called with clientId=[" + clientId + "]");
@@ -23,5 +26,15 @@ public class ClientController {
         String ret = serviceProvider.handle(clientId);
 
         return ret;
+    }
+
+    @RequestMapping(value = "altron/cim", params = { "clientId" }, method = RequestMethod.GET)
+    public String callCimService(@RequestParam("clientId") String clientId) {
+        logger.info("callCimService() was called with clientId=[" + clientId + "]");
+
+        cim.storeCustomerInteraction("subscriberSeq", "subId", "subIdType", "subscriberType", "spName",
+                "interactionDate", "callId", "userName", "accountId", "source", "topicCode", "comment");
+
+        return "CIM service was called with clientId=[" + clientId + "]";
     }
 }
