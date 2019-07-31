@@ -7,7 +7,7 @@ spring:
     driver:
       class: oracle.jdbc.driver.OracleDriver
     username: imwriter
-    password: giantant100
+    password: password
   jpa:
     show-sql: true
           
