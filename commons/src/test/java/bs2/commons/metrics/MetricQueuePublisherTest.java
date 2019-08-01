@@ -1,13 +1,15 @@
 package bs2.commons.metrics;
 
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.verify;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 
 /**
@@ -34,6 +36,6 @@ public class MetricQueuePublisherTest {
     @Test
     public void testPublish() {
         publisher.publish("serverName", "originId", "transactionClass", "transactionType", "transactionResult", 10000);
-        verify(publisher, times(1)).publish("serverName", "originId", "transactionClass", "transactionType", "transactionResult", 10000);
+        verify(channel, times(1)).send(any(Message.class));
     }
 }
