@@ -1,3 +1,4 @@
+-- login as objtransfer
 create table SMS_TRANSFER (
    ID                         NUMBER(19) not null,
    INTERACTION_DATE           TIMESTAMP not null,
@@ -14,7 +15,6 @@ create table SMS_TRANSFER (
    SP_NAME                    VARCHAR(35) not null,
    constraint PK_SMS_TRANSFER primary key (ID)
 );
-
 
 create table SCRATCHPAD_TRANSFER (
    ID                         NUMBER(19) not null,

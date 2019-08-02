@@ -72,8 +72,24 @@ create table IM_SERVICE_REQUEST_SUMMARIES (
    constraint PK_IMSRVRQ primary key (ID)
 );
 
-
-
+-- ****************************************************
+-- *             IM_TRANSACTION_SUMMARIES             *
+-- ****************************************************
+create table IM_TRANSACTION (
+   ID                         NUMBER(19) not null,
+   CREATED_DT                 TIMESTAMP not null,
+   PERIOD_INTERVAL            NUMBER(10) not null,
+   PERIOD_DT                  DATE not null,
+   SERVER_NAME                VARCHAR2(20) not null,
+   ORIGIN_ID                  VARCHAR2(20) not null,
+   TRANSACTION_CLASS          VARCHAR2(30) not null,
+   TRANSACTION_TYPE           VARCHAR2(30) not null,
+   PERIOD_TYPE                VARCHAR2(10) not null,
+   TRANSACTION_RESULT         VARCHAR2(10) not null, -- SUCESS, EXCEPTION
+   TRANSACTION_DURATION       NUMBER(9) not null,
+   RECORD_STATUS              VARCHAR2(10) not null, -- NEW, PROCESSING, PROCESSED
+   constraint PK_IM_TRANSACTION primary key (ID)
+);
 
 --------------------------------------------------------
 --  DDL for Sequence IM_SEQ
@@ -82,3 +98,4 @@ CREATE SEQUENCE  IM_SEQ
    MINVALUE 1 MAXVALUE 9999999999999999999999999999 
    INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER
    NOCYCLE NOKEEP NOSCALE GLOBAL;
+
